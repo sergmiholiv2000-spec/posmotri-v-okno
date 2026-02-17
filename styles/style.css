@@ -73,28 +73,29 @@ ol {
   align-content: center;
   flex-wrap: wrap;
   padding-top: 133px;
-  gap: 26px;
+  margin-right: 34px;
+  gap: 10px;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
-  margin: 30px;
+  margin-bottom: 20px;
 }
 
 .content__list-container {
   display: flex;
   flex-direction: column;
   height: 534px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
+  gap: 30px;
 }
 
 .result {
-  padding-bottom: 200px;
-  padding-left: 30px;
+  padding-bottom: 205px;
+  padding-left: 55px;
 }
 
 .result__video-container {
@@ -107,7 +108,7 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .content__list {
@@ -131,18 +132,17 @@ ol {
 
 .content__video-card-description-container {
   width: 194px;
-  height: 103px;
   flex-grow: 1;
 }
 
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .title {
   width: 259px;
-  height: 210px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -169,6 +169,7 @@ ol {
 }
 
 .content__video-card-title {
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-family: "Oswald", sans-serif;
@@ -178,8 +179,9 @@ ol {
 
 .content__video-card-description {
   display: -webkit-box;
-  line-clamp: 1;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
   font-size: 17px;
 }
@@ -196,7 +198,10 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .search-form__fieldset {
@@ -209,12 +214,12 @@ ol {
   width: fit-content;
 }
 
-.input {
+.element {
   appearance: none;
   display: flex;
   width: 225px;
   height: 27px;
-  background-color: black;
+  background-color: transparent;
   color: #fff;
   font-size: 18px;
   gap: 10px;
@@ -223,6 +228,7 @@ ol {
 .search-form__textfield {
   width: 225px;
   height: 27px;
+  margin-top: 6px;
   background-color: rgba(255, 255, 255, 0);
   border-top: 1px solid rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 1);
@@ -270,7 +276,7 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid rgb(132, 138, 132);
+  outline: 1px solid rgb(235, 235, 235, 1);
   outline-offset: 1px;
   cursor: pointer;
 }
@@ -279,7 +285,7 @@ ol {
   height: 34px;
   display: inline-block;
   text-align: center;
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
   background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
   font-size: 18px;
@@ -310,7 +316,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #ffffffa8;
+  outline: 1px solid rgb(235, 235, 235, 1);
   outline-offset: 1px;
 }
 
