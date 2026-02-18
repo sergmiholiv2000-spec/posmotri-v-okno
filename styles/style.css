@@ -66,6 +66,7 @@ ol {
   gap: 30px;
   padding-right: 20px;
   padding-bottom: 50px;
+  position: relative;
 }
 
 .content__details {
@@ -153,8 +154,6 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .content__list-item {
@@ -198,8 +197,8 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 20px;
-  padding-right: 5px;
+  gap: 15px;
+
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -212,9 +211,13 @@ ol {
   display: flex;
   align-items: center;
   width: fit-content;
+  font-weight: 400;
+  font-family: "Fira Sans Condensed", sans-serif;
+  color: #ffffff;
+  gap: 5px;
 }
 
-.element {
+input {
   appearance: none;
   display: flex;
   width: 225px;
@@ -233,7 +236,9 @@ ol {
   border-top: 1px solid rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  color: #ffffffb2;
 }
 
 .search-form__textfield::placeholder {
@@ -289,6 +294,8 @@ ol {
   background-color: rgba(255, 255, 255, 0);
   color: #ffffff;
   font-size: 18px;
+  font-weight: 700;
+  font-family: "Fira Sans Condensed", sans-serif;
   cursor: pointer;
 }
 
@@ -308,7 +315,7 @@ ol {
 }
 
 .button:active {
-  color: #545050;
+  background-color: #545050;
 }
 
 .button:focus {
@@ -322,4 +329,31 @@ ol {
 
 .content__card-link_current {
   background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0;
+  text-underline-offset: 0;
+  color: #ffffff;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+.content__card-link:focus-visible {
+  outline: 1px solid rgb(235, 235, 235, 1);
+  outline-offset: 1px;
+}
+
+.error-template {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1140px;
+  height: 534px;
 }
